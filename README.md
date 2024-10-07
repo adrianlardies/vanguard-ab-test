@@ -1,103 +1,120 @@
-# 🚀 Vanguard A/B Testing: Analysis of New UI Impact on Process Completion
+# 🚀 **Vanguard A/B Testing: Análisis del Impacto de la Nueva Interfaz en la Finalización de Procesos**
 
-## 💻 Team Members
+## 💼 **Equipo de Trabajo**
 - Adrián Lardiés
 - Irene Sifre
 
-## 📋 Table of Contents
-1. [Project Overview](#project-overview)
-2. [Data Sources](#data-sources))
-3. [Methodology](#methodology)
-4. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-5. [Performance and Insights](#performance-and-insights)
-6. [Conclusions](#conclusions)
+## 📋 **Índice**
+1. [Resumen del Proyecto](#resumen-del-proyecto)
+2. [Fuentes de Datos](#fuentes-de-datos)
+3. [Metodología](#metodología)
+4. [Análisis Exploratorio de Datos (EDA)](#análisis-exploratorio-de-datos-eda)
+5. [Rendimiento e Insights](#rendimiento-e-insights)
+6. [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
+
 ---
-## ✨ Project Overview
 
-**Context**  
-As data analysts at Vanguard, our task was to evaluate the effectiveness of a new user interface designed to improve customer engagement and process completion rates through a controlled A/B test.
+## ✨ **Resumen del Proyecto**
 
-**The Digital Challenge**  
-Vanguard recognized the evolving digital landscape and the need for a more intuitive and modern User Interface (UI) with timely in-context prompts. 
-The critical question was: *Would these enhancements encourage more clients to successfully complete their online processes?*
+### **Contexto**
+Como analistas de datos en Vanguard, nuestra tarea fue evaluar la efectividad de una nueva interfaz de usuario (UI) diseñada para mejorar el compromiso de los clientes y las tasas de finalización de procesos. Esto se llevó a cabo a través de una prueba controlada A/B, comparando la nueva interfaz con la tradicional.
 
-**Experiment Conducted**  
-This analysis focuses on the impact of the new user interface compared to the traditional interface, assessing its influence on customer engagement and completion rates.
+### **El Desafío Digital**
+Vanguard identificó la necesidad de modernizar su experiencia digital para ofrecer una interfaz de usuario más intuitiva y moderna. La pregunta clave era:
+*¿Lograrán estos cambios que más clientes completen sus procesos en línea con éxito?*
 
-The study primarily focuses on:
-- Conversion rates by process step
-- Error rates and user drop-offs
-- Differences in behavior between users who successfully completed the process and those who didn’t
-- Average time spent moving between steps for both the test and control groups
+### **El Experimento**
+El análisis se centró en el impacto de la nueva interfaz en comparación con la interfaz tradicional, evaluando su influencia en el compromiso del cliente y las tasas de finalización de procesos.
 
-**Study Period:** March 15th, 2017 - June 20th, 2017
+**Aspectos claves del estudio**:
+- Tasas de conversión en cada paso del proceso.
+- Tasas de error y abandono de usuarios.
+- Diferencias en el comportamiento entre usuarios que completaron el proceso correctamente y los que no.
+- Tiempos promedio empleados en cada paso tanto en el grupo de prueba como en el grupo de control.
 
-## 📑 Data Sources
-- **Client Profiles**: Demographic data for each customer.
-- **Digital Footprints**: Web interaction data including timestamps, actions taken at each step, and process completion.
-- **Experiment Roster**: Data indicating whether a user was in the test or control group.
+**Periodo de estudio:** 15 de marzo de 2017 - 20 de junio de 2017
 
-## 📚 Methodology
-
-### **1. Data Preparation and Cleaning**
-- **Merging Datasets**: Combined client demographic data with digital footprints and the experiment roster for each user to create a comprehensive dataset.
-- **Missing Values**: Analyzed missing or null values and applied appropriate treatments (e.g., removal or imputation) to ensure data integrity.
-
-### **2. User Journey Segmentation**
-- **Group Classification**: Divided users into control and test groups. Further categorizing them based on their performance: those who completed the process correctly and those who did not.  
-- **Performance Analysis**: Measured the time taken between each step  for both control and test groups, calculating individual averages per step as well as aggregated averages for the entire process.
-
-### **3. Data Visualization and Analysis**
-- **Visualization**: Utilized libraries such as Matplotlib and Seaborn to create visual representations of user behaviors and performance metrics, facilitating easier comparison between groups.
-- **Statistical Analysis**: Conducted tests to compare averages and percentages of users who completed the process correctly step-by-step across both the control and test groups.
-
-### **4. Testing and Implementation of Insights**
-- **Hypothesis Testing**: Performed statistical tests to evaluate the significance of the observed differences in performance metrics between the two groups.
-- **Implementation of Findings**: Developed actionable insights based on the analysis, such as identifying areas for interface improvement.
 ---
-## 🔎 Exploratory Data Analysis (EDA)
 
-The EDA phase focused on understanding key metrics and user behavior through visualizations and statistical tests.
+## 📑 **Fuentes de Datos**
+- **Perfiles de Clientes**: Datos demográficos como edad, balance y nivel de actividad de los clientes.
+- **Huella Digital**: Interacciones web de los usuarios, incluidos los registros de acciones en cada paso y finalización del proceso.
+- **Registro del Experimento**: Información que indica si un usuario pertenecía al grupo de prueba o al grupo de control.
 
-### 1. Visualizations
-- **Box Plots**: Visualized the distribution of time spent on each process step across user groups (test vs. control), identifying outliers and data spread.
-- **Histograms**: Assessed the frequency distribution of key metrics, such as time spent per step and completion rates, to evaluate skewness.
+---
 
-### 2. Statistical Testing
-- Conducted statistical tests (e.g., t-tests or Mann-Whitney U tests) to compare means and medians between the test and control groups, identifying statistically significant differences.
-- Evaluated effect sizes to understand the practical significance of results, providing insight into the impact of the new interface.
+## 📚 **Metodología**
 
-## 📊 Performance and Insights
-In this section, we present the graphs the project required for the results of the A/B test analysis.
-Focusing on key metrics such as error rates, completion.
+### **1. Preparación y Limpieza de Datos**
+- **Unificación de Conjuntos de Datos**: Se combinaron los datos demográficos de los clientes con las interacciones digitales y el registro del experimento para crear un dataset completo.
+- **Tratamiento de Valores Faltantes**: Se analizaron los valores nulos o faltantes y se aplicaron técnicas de imputación o eliminación según el caso para asegurar la integridad de los datos.
 
-### **1. Average time for each step **  
+### **2. Segmentación del Viaje del Usuario**
+- **Clasificación de Grupos**: Los usuarios fueron divididos en grupos de control y prueba. También se les clasificó según su rendimiento: aquellos que completaron el proceso correctamente y los que no.
+- **Análisis de Rendimiento**: Se midió el tiempo tomado entre cada paso para ambos grupos, calculando promedios individuales por paso, así como promedios agregados para todo el proceso.
+
+### **3. Visualización y Análisis de Datos**
+- **Visualización**: Se utilizaron bibliotecas como Matplotlib y Seaborn para crear representaciones visuales del comportamiento de los usuarios y las métricas de rendimiento, facilitando la comparación entre los grupos.
+- **Análisis Estadístico**: Se realizaron pruebas estadísticas para comparar las medias y los porcentajes de usuarios que completaron correctamente el proceso en cada paso, entre los grupos de control y prueba.
+
+### **4. Pruebas e Implementación de Insights**
+- **Pruebas de Hipótesis**: Se realizaron pruebas estadísticas para evaluar la significancia de las diferencias observadas en las métricas de rendimiento entre los dos grupos.
+- **Implementación de Hallazgos**: Se desarrollaron insights accionables basados en el análisis, como la identificación de áreas donde la interfaz puede mejorar.
+
+---
+
+## 🔎 **Análisis Exploratorio de Datos (EDA)**
+
+La fase de EDA se centró en comprender las métricas clave y el comportamiento del usuario a través de visualizaciones y pruebas estadísticas.
+
+### 1. Visualizaciones
+- **Diagramas de Caja**: Se visualizaron las distribuciones del tiempo empleado en cada paso del proceso para ambos grupos (prueba vs. control), identificando valores atípicos y la dispersión de los datos.
+- **Histogramas**: Se evaluó la distribución de frecuencias de métricas clave, como el tiempo empleado por paso y las tasas de finalización, para analizar la asimetría de los datos.
+
+### 2. Pruebas Estadísticas
+- Se realizaron pruebas estadísticas (como t-tests o pruebas Mann-Whitney U) para comparar las medias y medianas entre los grupos de prueba y control, identificando diferencias significativas.
+- Se evaluaron los tamaños del efecto para comprender la importancia práctica de los resultados, proporcionando una visión clara del impacto de la nueva interfaz.
+
+---
+
+## 📊 **Rendimiento e Insights**
+
+A continuación se presentan los gráficos requeridos por el proyecto para los resultados del análisis de la prueba A/B, con un enfoque en las métricas clave como las tasas de error y finalización.
+
+### **1. Tiempo promedio por paso**  
 ![image](https://github.com/user-attachments/assets/736359e2-9c73-4fed-b062-4fb4c494a072)
 ![image](https://github.com/user-attachments/assets/2a71d468-9ee5-4521-a021-70679833a634)
-- Lower times for each step in clients doing the correct process (confirmation of our filter), except in Confirm.
-- In all steps the new version is more efficient than the old one, except in Confirm.
-- Overall Improvement the UX experience in Confirm.
+- Los tiempos son más bajos en cada paso para los clientes que completaron el proceso correctamente, excepto en el paso de Confirmación.
+- En todos los pasos, la nueva versión es más eficiente que la antigua, excepto en Confirmación.
+- Mejora general de la experiencia de usuario en el paso de Confirmación.
 
-### **2. Error rates**  
-![image](https://github.com/user-attachments/assets/030392d8-d5f3-44c3-8c28-a4ded2674e80) 
- - Error rate in Start is higher in Test, we could interpret that it is due to the fact that users were used to the classic use of the web.
- - Step 1 is notably deficient in the new version as well.
- - Step 2 and 3 performance is improved with respect to error rate in the new version.
- - Focus on improving the UX experience in Start, Step 1 and 2.
+### **2. Tasas de error**  
+![image](https://github.com/user-attachments/assets/030392d8-d5f3-44c3-8c28-a4ded2674e80)
+- La tasa de error en el paso de Inicio es mayor en el grupo de prueba, lo que podría interpretarse como que los usuarios estaban acostumbrados al uso clásico de la web.
+- El Paso 1 es notablemente deficiente en la nueva versión.
+- El rendimiento en los Pasos 2 y 3 mejora en la nueva versión respecto a la tasa de error.
+- Enfocarse en mejorar la experiencia de usuario en los pasos de Inicio, Paso 1 y Paso 2.
 
-### **3. Completion rates** 
+### **3. Tasas de finalización**  
 ![image](https://github.com/user-attachments/assets/25fab45e-6ed0-41c7-80f7-d67ab9503193)
-- Lower times for each step in clients doing the correct process (confirmation of our filter), except in Confirm.
-- In all steps the new version is more efficient than the old one, except in Confirm.
-- Improve the UX experience in Confirm.
-## 📈 Insights and Conclusions
+- Tiempos más bajos en cada paso para los clientes que siguieron correctamente el proceso, excepto en el paso de Confirmación.
+- En todos los pasos, la nueva versión es más eficiente que la antigua, excepto en Confirmación.
+- Mejorar la experiencia de usuario en el paso de Confirmación.
 
-- **Process Completion Rates**: The new user interface (test group) showed a slight improvement in completion rates compared to the traditional interface (control group).
-- However, the difference was not overwhelming, suggesting that while the UI changes had a positive effect, further enhancements might be needed to drive significant improvements.
-- **Statistical Significance**: While some differences between the test and control groups were noticeable, statistical tests revealed that not all differences were significant.
-- **User Segmentation**: By dividing users into those who completed the process correctly and those who didn’t, we identified that users who did not follow the steps correctly a key point in the analysis.
+---
 
-- **Recommendations and Limitations**:
-  - While the new UI shows certain efficiency improvements, additional changes are needed in several steps.
-  - A significant amount of data (20.000 observations) was rejected as it was not classified in control or test.
-  - Further testing is recommended, including additional metrics or features to address the behavior of users who deviate from the expected process.
+## 📈 **Insights y Conclusiones**
+
+- **Tasas de Finalización del Proceso**: La nueva interfaz de usuario (grupo de prueba) mostró una ligera mejora en las tasas de finalización en comparación con la interfaz tradicional (grupo de control).
+- **Significancia Estadística**: Algunas diferencias entre los grupos fueron evidentes, pero no todas fueron estadísticamente significativas.
+- **Segmentación de Usuarios**: Al dividir a los usuarios en aquellos que completaron el proceso correctamente y aquellos que no, se identificó que los usuarios que no siguieron los pasos correctamente fueron un punto clave de análisis.
+
+---
+
+## 🔎 **Recomendaciones y Limitaciones**
+
+- **Recomendaciones**:
+  - Aunque la nueva UI muestra mejoras en la eficiencia, son necesarias mejoras adicionales en varios pasos.
+- **Limitaciones**:
+  - Una cantidad significativa de datos (20.000 observaciones) fue rechazada por no estar correctamente clasificada como control o prueba.
+  - Se recomienda realizar más pruebas incluyendo métricas o características adicionales para abordar el comportamiento de los usuarios que se desvían del proceso esperado.

@@ -21,7 +21,7 @@ paso_seleccionado = st.sidebar.selectbox('Seleccione el paso a analizar', ['Todo
 
 @st.cache_data
 def cargar_datos():
-    df = pd.read_csv('../data/cleaned/vanguard.csv', index_col=None)  # Evita cargar un índice extra
+    df = pd.read_csv('data/cleaned/vanguard.csv', index_col=None)
     return df
 
 df_vanguard = cargar_datos()
